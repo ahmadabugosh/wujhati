@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Wujhati LLC</title>
+  <style>
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: #0d0d0d;
+      color: #f5c400;
+      font-family: 'Courier New', Courier, monospace;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    a {
+      color: #f5c400;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
+    a:hover {
+      color: #ffe066;
+      text-shadow: 0 0 8px #f5c400;
+    }
+
+    /* ── Header ── */
+    header {
+      border-bottom: 1px solid #f5c40033;
+      padding: 2rem 2rem 1.5rem;
+    }
+
+    .prompt-line {
+      font-size: 0.75rem;
+      color: #f5c40088;
+      margin-bottom: 0.5rem;
+      letter-spacing: 0.05em;
+    }
+
+    h1 {
+      font-size: clamp(2rem, 6vw, 3.5rem);
+      font-weight: normal;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      text-shadow: 0 0 18px #f5c40066;
+    }
+
+    h1 .cursor {
+      display: inline-block;
+      width: 0.6em;
+      height: 1em;
+      background: #f5c400;
+      vertical-align: middle;
+      margin-left: 4px;
+      animation: blink 1.1s step-start infinite;
+    }
+
+    @keyframes blink {
+      50% { opacity: 0; }
+    }
+
+    /* ── Main content ── */
+    main {
+      flex: 1;
+      padding: 3rem 2rem;
+      max-width: 780px;
+    }
+
+    .section-label {
+      font-size: 0.7rem;
+      color: #f5c40066;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      margin-bottom: 0.75rem;
+    }
+
+    .section-label::before {
+      content: '> ';
+      color: #f5c400aa;
+    }
+
+    p.description {
+      font-size: 1rem;
+      line-height: 1.85;
+      color: #e8b800;
+      margin-bottom: 2.5rem;
+    }
+
+    /* ── Subsidiaries ── */
+    .subsidiaries {
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+    }
+
+    .sub-card {
+      border: 1px solid #f5c40033;
+      padding: 1.25rem 1.5rem;
+      background: #111100;
+      transition: border-color 0.2s, box-shadow 0.2s;
+    }
+
+    .sub-card:hover {
+      border-color: #f5c40077;
+      box-shadow: 0 0 16px #f5c40022;
+    }
+
+    .sub-card .tag {
+      font-size: 0.65rem;
+      color: #f5c40066;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      margin-bottom: 0.5rem;
+    }
+
+    .sub-card a {
+      font-size: 1.1rem;
+      letter-spacing: 0.05em;
+    }
+
+    /* ── Footer ── */
+    footer {
+      border-top: 1px solid #f5c40033;
+      padding: 1.25rem 2rem;
+      font-size: 0.75rem;
+      color: #f5c40066;
+      letter-spacing: 0.04em;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="prompt-line">root@wujhati:~$</div>
+    <h1>Wujhati LLC<span class="cursor"></span></h1>
+  </header>
+
+  <main>
+    <div class="section-label">about</div>
+    <p class="description">
+      Wujhati LLC is a holding company providing the United States operational
+      home for its portfolio companies.
+    </p>
+
+    <div class="section-label">portfolio</div>
+    <div class="subsidiaries">
+
+      <div class="sub-card">
+        <div class="tag">US operations &mdash; AI &amp; software</div>
+        <a href="https://generalmagic.io" target="_blank" rel="noopener noreferrer">
+          General Magic &rarr;
+        </a>
+      </div>
+
+      <div class="sub-card">
+        <div class="tag">US operations &mdash; education &amp; AI</div>
+        <a href="https://learnopenclaw.ai" target="_blank" rel="noopener noreferrer">
+          Learn Open Claw &rarr;
+        </a>
+      </div>
+
+    </div>
+  </main>
+
+  <footer>
+    8 The Green, Suite R &mdash; Dover, Delaware 19901 &mdash; USA
+  </footer>
+
+</body>
+</html>
